@@ -1,0 +1,66 @@
+/* Глобальные стили */
+html {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  overflow: hidden;
+  background-color: #6711b6;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  background-color: rgb(13, 13, 13);
+}
+
+.box::before {
+  position: absolute;
+  content: "";
+  width: 180px;
+  height: 140%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgb(8, 8, 8);
+  animation: animate 4s linear infinite;
+}
+
+.box::after {
+  position: absolute;
+  content: "";
+  inset: 10px;
+  border-radius: 16px;
+  background-color: #6711b6;
+}
+
+
+@keyframes animate {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+
+}
